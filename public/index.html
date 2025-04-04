@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="./styles/login.css">
+  <title>Login</title>
+</head>
+<body>
+  
+  <div class="container" id="login">
+    <h1>LOGIN</h1>
+    <span id="msg" class="msg"></span>
+      <form id="logar">
+        <div class="conteudo">
+          <label for="usuario">Usuario:</label>
+          <input type="text" placeholder="Digite seu usuario" id="usuario" name="usuario">
+        </div>
+        <div class="conteudo">
+          <label for="senha">Senha:</label>
+          <input type="password" placeholder="Digite sua senha" id="senha" name="senha">
+        </div>
+        <input type="submit" value="Acessar" class="acessar">
+        
+      </form>
+      <span class="cadastro"> Ainda não tem cadastro? <button class="btn-sm1" id="btncad">Cadastre-se!</button></span>
+  </div>
+  <div class="container" id="cadastro">
+    <span id="voltar" class="voltar">X</span>
+    <h1>CASTRO</h1>
+    <span id="Cadmsg" class="msg"></span>
+      <form id="cadastrar">
+        <div class="conteudo">
+          <label for="Cadnome">Nome:</label>
+          <input type="text" placeholder="Digite seu nome" id="Cadnome" name="Cadnome">
+        </div>
+        <div class="conteudo">
+          <label for="Cadusuario">Usuario:</label>
+          <input type="text" placeholder="Digite seu usuario" id="Cadusuario" name="Cadusuario">
+        </div>
+        <div class="conteudo">
+          <label for="Cadsenha">Senha:</label>
+          <input type="password" placeholder="Digite sua senha" id="Cadsenha" name="Cadsenha">
+        </div>
+        <input type="submit" value="Cadastrar" class="acessar">
+      </form>
+    
+  </div>
+  <script src="js/login.js"></script>
+</body>
+</html>

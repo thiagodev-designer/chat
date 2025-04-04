@@ -1,0 +1,573 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+  <title>WhatsApp</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+  <link rel="stylesheet" href="styles/style.css">
+
+  <link href="//maxcdn.bootstrapcdn.com/bootstrap/3.3.0/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">
+<script src="//maxcdn.bootstrapcdn.com/bootstrap/3.3.0/js/bootstrap.min.js"></script>
+<script src="//code.jquery.com/jquery-1.11.1.min.js"></script>
+
+  <!-- Font Awesome File -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+  <script src="https://cdn.socket.io/4.8.1/socket.io.min.js" integrity="sha384-mkQ3/7FUtcGyoppY6bz/PORYoGqOl7/aSUMn2ymDOJcapfS6PHqxhRTMh1RR0Q6+" crossorigin="anonymous"></script>
+</head>
+
+<body>
+
+  <div class="containe-fluid app">
+    <div class="row app-one">
+
+      <div class="col-sm-4 side">
+        <div class="side-one">
+          
+          <!-- Heading -->
+          <div class="row heading">
+            <div class="col-sm-3 col-xs-3 heading-avatar">
+              <div class="heading-avatar-icon">
+                  <a href="my-profile/profile-page.html"> 
+                <img src="img/LOGO-png.png">
+                
+                </a>
+                
+              </div>
+              
+            </div>
+            <span id="usuarioLogado" class="nome"></span>
+            <div class="col-sm-1 col-xs-1  heading-dot  pull-right">
+              <i class="fa fa-ellipsis-v fa-2x  pull-right" aria-hidden="true"></i>
+            </div>
+            <div class="col-sm-2 col-xs-2 heading-compose  pull-right">
+              <i class="fa fa-comments fa-2x  pull-right" aria-hidden="true"></i>
+            </div>
+          </div>
+          <!-- Heading End -->
+
+          <!-- SearchBox -->
+          <div class="row searchBox">
+            <div class="col-sm-12 searchBox-inner">
+              <div class="form-group has-feedback">
+                <input id="searchText" type="text" class="form-control" name="searchText" placeholder="Search">
+                <span class="glyphicon glyphicon-search form-control-feedback"></span>
+              </div>
+            </div>
+          </div>
+
+          <!-- Search Box End -->
+          <!-- sideBar -->
+          <div class="row sideBar" id="sideBar">
+            
+          </div>
+          <!-- Sidebar End -->
+        </div>
+        <div class="side-two">
+
+          <!-- Heading -->
+          <div class="row newMessage-heading">
+            <div class="row newMessage-main">
+              <div class="col-sm-2 col-xs-2 newMessage-back">
+                <i class="fa fa-arrow-left" aria-hidden="true"></i>
+              </div>
+              <div class="col-sm-10 col-xs-10 newMessage-title">
+                Atendimentos Finalizados
+              </div>
+            </div>
+          </div>
+          <!-- Heading End -->
+
+          <!-- ComposeBox -->
+          <div class="row composeBox">
+            <div class="col-sm-12 composeBox-inner">
+              <div class="form-group has-feedback">
+                <input id="composeText" type="text" class="form-control" name="searchText" placeholder="Search People">
+                <span class="glyphicon glyphicon-search form-control-feedback"></span>
+              </div>
+            </div>
+          </div>
+          <!-- ComposeBox End -->
+
+          <!-- sideBar -->
+          <div class="row compose-sideBar">
+            <div class="row sideBar-body">
+              <div class="col-sm-3 col-xs-3 sideBar-avatar">
+                <div class="avatar-icon">
+                  <img src="img/user 1.png">
+                </div>
+              </div>
+              <div class="col-sm-9 col-xs-9 sideBar-main">
+                <div class="row">
+                  <div class="col-sm-8 col-xs-8 sideBar-name">
+                    <span class="name-meta">Nome
+                  </span>
+                  </div>
+                  <div class="col-sm-4 col-xs-4 pull-right sideBar-time">
+                    <span class="time-meta pull-right">10:18
+                  </span>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <div class="row sideBar-body">
+              <div class="col-sm-3 col-xs-3 sideBar-avatar">
+                <div class="avatar-icon">
+                  <img src="img/user 2.png">
+                </div>
+              </div>
+              <div class="col-sm-9 col-xs-9 sideBar-main">
+                <div class="row">
+                  <div class="col-sm-8 col-xs-8 sideBar-name">
+                    <span class="name-meta">Nome
+                  </span>
+                  </div>
+                  <div class="col-sm-4 col-xs-4 pull-right sideBar-time">
+                    <span class="time-meta pull-right">10:18
+                  </span>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="row sideBar-body">
+              <div class="col-sm-3 col-xs-3 sideBar-avatar">
+                <div class="avatar-icon">
+                  <img src="img/user 3.png">
+                </div>
+              </div>
+              <div class="col-sm-9 col-xs-9 sideBar-main">
+                <div class="row">
+                  <div class="col-sm-8 col-xs-8 sideBar-name">
+                    <span class="name-meta">Nome
+                  </span>
+                  </div>
+                  <div class="col-sm-4 col-xs-4 pull-right sideBar-time">
+                    <span class="time-meta pull-right">10:18
+                  </span>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="row sideBar-body">
+              <div class="col-sm-3 col-xs-3 sideBar-avatar">
+                <div class="avatar-icon">
+                  <img src="img/user 4.png">
+                </div>
+              </div>
+              <div class="col-sm-9 col-xs-9 sideBar-main">
+                <div class="row">
+                  <div class="col-sm-8 col-xs-8 sideBar-name">
+                    <span class="name-meta">Nome
+                  </span>
+                  </div>
+                  <div class="col-sm-4 col-xs-4 pull-right sideBar-time">
+                    <span class="time-meta pull-right">10:18
+                  </span>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="row sideBar-body">
+              <div class="col-sm-3 col-xs-3 sideBar-avatar">
+                <div class="avatar-icon">
+                  <img src="img/user 5.png">
+                </div>
+              </div>
+              <div class="col-sm-9 col-xs-9 sideBar-main">
+                <div class="row">
+                  <div class="col-sm-8 col-xs-8 sideBar-name">
+                    <span class="name-meta">Nome
+                  </span>
+                  </div>
+                  <div class="col-sm-4 col-xs-4 pull-right sideBar-time">
+                    <span class="time-meta pull-right">10:18
+                  </span>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="row sideBar-body">
+              <div class="col-sm-3 col-xs-3 sideBar-avatar">
+                <div class="avatar-icon">
+                  <img src="img/user 6.png">
+                </div>
+              </div>
+              <div class="col-sm-9 col-xs-9 sideBar-main">
+                <div class="row">
+                  <div class="col-sm-8 col-xs-8 sideBar-name">
+                    <span class="name-meta">Nome
+                  </span>
+                  </div>
+                  <div class="col-sm-4 col-xs-4 pull-right sideBar-time">
+                    <span class="time-meta pull-right">10:18
+                  </span>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="row sideBar-body">
+              <div class="col-sm-3 col-xs-3 sideBar-avatar">
+                <div class="avatar-icon">
+                  <img src="img/user 1.png">
+                </div>
+              </div>
+              <div class="col-sm-9 col-xs-9 sideBar-main">
+                <div class="row">
+                  <div class="col-sm-8 col-xs-8 sideBar-name">
+                    <span class="name-meta">Nome
+                  </span>
+                  </div>
+                  <div class="col-sm-4 col-xs-4 pull-right sideBar-time">
+                    <span class="time-meta pull-right">10:18
+                  </span>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="row sideBar-body">
+              <div class="col-sm-3 col-xs-3 sideBar-avatar">
+                <div class="avatar-icon">
+                  <img src="img/user 2.png">
+                </div>
+              </div>
+              <div class="col-sm-9 col-xs-9 sideBar-main">
+                <div class="row">
+                  <div class="col-sm-8 col-xs-8 sideBar-name">
+                    <span class="name-meta">Nome
+                  </span>
+                  </div>
+                  <div class="col-sm-4 col-xs-4 pull-right sideBar-time">
+                    <span class="time-meta pull-right">10:18
+                  </span>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="row sideBar-body">
+              <div class="col-sm-3 col-xs-3 sideBar-avatar">
+                <div class="avatar-icon">
+                  <img src="img/user 3.png">
+                </div>
+              </div>
+              <div class="col-sm-9 col-xs-9 sideBar-main">
+                <div class="row">
+                  <div class="col-sm-8 col-xs-8 sideBar-name">
+                    <span class="name-meta">Nome
+                  </span>
+                  </div>
+                  <div class="col-sm-4 col-xs-4 pull-right sideBar-time">
+                    <span class="time-meta pull-right">10:18
+                  </span>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="row sideBar-body">
+              <div class="col-sm-3 col-xs-3 sideBar-avatar">
+                <div class="avatar-icon">
+                  <img src="img/user 4.png">
+                </div>
+              </div>
+              <div class="col-sm-9 col-xs-9 sideBar-main">
+                <div class="row">
+                  <div class="col-sm-8 col-xs-8 sideBar-name">
+                    <span class="name-meta">Nome
+                  </span>
+                  </div>
+                  <div class="col-sm-4 col-xs-4 pull-right sideBar-time">
+                    <span class="time-meta pull-right">10:18
+                  </span>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <!-- Sidebar End -->
+      </div>
+
+
+      <!-- New Message Sidebar End -->
+
+      <!-- Conversation Start -->
+      <div class="col-sm-8 conversation" id="chat">
+              <!-- Heading -->
+          <div class="row heading" >
+            <div class="col-sm-2 col-md-1 col-xs-3 heading-avatar">
+              <div class="heading-avatar-icon">
+                <img src="img/user 2.png">
+                
+              </div>
+              
+            </div>
+            <div class="col-sm-8 col-xs-7 heading-name">
+              <a class="heading-name-meta">
+                <span id="nome" class="nome-atend"></span>
+              </a>
+              <span class="heading-online">Online</span>
+            </div>
+            <div class="col-sm-1 col-xs-1  heading-dot pull-right">
+              <i class="fa fa-ellipsis-v fa-2x  pull-right" aria-hidden="true" id="hidden"></i>
+            </div>
+          </div>
+          <div class="hiddenSair hide" id="hiddensair">
+            <a href="" id="FinalizarAtt">Finalizar Atendimento</a>
+          </div>
+          <!-- Heading End -->
+           <!-- Message Box -->
+            <div class="row message" id="conversation"></div>
+           <!-- Reply Box -->
+          <div class="row reply">
+            <div class="col-sm-1 col-xs-1 reply-emojis">
+              <i class="fa fa-smile-o fa-2x"></i>
+            </div>
+            <div class="col-sm-9 col-xs-9 reply-main">
+              <form id="form">
+                <input type="text" class="form-control" rows="1" id="comment">
+                <input type="submit" class="form-control" rows="1" id="submit" style="display: none;">
+                
+              </form>
+            </div>
+            <div class="col-sm-1 col-xs-1 reply-recording">
+              <i class="fa fa-microphone fa-2x" aria-hidden="false"></i>
+            </div>
+            <div class="col-sm-1 col-xs-1 reply-send">
+              <i class="fa fa-send fa-2x" aria-hidden="true" ></i>
+            </div>
+          </div>
+        <!-- Reply Box End -->
+      </div>
+      <!-- Conversation End -->
+    </div>
+    <!-- App One End -->
+  </div>
+  <script>
+    $(function(){
+    $(".heading-compose").click(function() {
+      $(".side-two").css({
+        "left": "0"
+      });
+    });
+
+    $(".newMessage-back").click(function() {
+      $(".side-two").css({
+        "left": "-100%"
+      });
+    });
+})
+  if(!localStorage.getItem('Usuario')){
+    location.href='index.html';
+  }else{
+    
+  }
+  </script>
+
+  
+
+  <!-- App End -->
+   <script src="js/custom.js"></script>
+   <script src="/socket.io/socket.io.js"></script>
+<script>
+  
+  var status = 'atendendo';
+  const socket = io();
+  
+  const dado =localStorage.getItem('received')==null?[]:JSON.parse(localStorage.getItem('received'));
+  socket.on('sair',(dados)=>{
+    console.log(dados);
+    
+    const localname = dados.toString();
+   const data = JSON.parse(localStorage.getItem('received'));
+    const delet = data.filter(item =>item.sala != dados);
+    localStorage.setItem('received',JSON.stringify(delet));
+    localStorage.clear(localname);
+    
+    atualizaTela(delet);
+    
+    
+  }) 
+  const  atualizaTela = item =>{
+    const sidebar = document.getElementById('sideBar');
+    sidebar.innerHTML="";
+    item.forEach((dados)=>{
+      const data = new Date(dados.data)
+      
+      
+      sidebar.innerHTML +=`
+            <div class="row sideBar-body" onclick="buscaDados(${dados.sala})" >
+              <div class="col-sm-3 col-xs-3 sideBar-avatar">
+                <div class="avatar-icon">
+                  <img src="img/user 3.png">
+                </div>
+              </div>
+              <div class="col-sm-9 col-xs-9 sideBar-main">
+                <div class="row">
+                  <div class="col-sm-8 col-xs-8 sideBar-name" >
+                    <span class="name-meta">${dados.nome}
+                  </span><br>
+                  ${dados.text=='1'?'Iniciar atendimento!':dados.text}
+                  </div>
+                  <div class="col-sm-4 col-xs-4 pull-right sideBar-time">
+                    <span class="time-meta pull-right">${data.getHours()+':'+data.getMinutes()}
+                  </span>
+                  <span id="${dados.sala}" class="qtdmsg"></span>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+`
+
+    });
+
+  }
+  const atualizaMsg = lista=>{
+     
+   const data = new Date(lista.time*1000);
+   const hora = data.getHours();
+   const minuto = data.getMinutes().toFixed(0); 
+
+    var classe = lista.status;// receiver sender
+    chat.innerHTML+=`
+      
+      <div class="row message-body">
+        <div class="col-sm-12 message-main-${classe}">
+          <div class="receiver">
+            <div class="message-text">
+             ${lista.text}
+            </div>
+            <span class="message-time pull-right">
+              ${hora}:${minuto}
+            </span>
+            <span class=""></span>
+          </div>
+        </div>
+      </div>
+      
+    `;
+    
+   chat.scrollTo(0,chat.scrollHeight);
+  }
+ 
+  const handleReceived=()=>{
+     const sidebar = document.getElementById('sideBar');
+    sidebar.innerHTML="";
+     
+    dado.forEach((dados)=>{
+      const data = new Date(dados.data * 1000)
+      
+      
+      sidebar.innerHTML +=`
+            <div class="row sideBar-body" onclick="buscaDados(${dados.sala})" >
+              <div class="col-sm-3 col-xs-3 sideBar-avatar">
+                <div class="avatar-icon">
+                  <img src="img/user 3.png">
+                </div>
+              </div>
+              <div class="col-sm-9 col-xs-9 sideBar-main">
+                <div class="row">
+                  <div class="col-sm-8 col-xs-8 sideBar-name" >
+                    <span class="name-meta">${dados.nome}
+                  </span><br>
+                  ${dados.text=='1'?'Iniciar atendimento!':dados.text}
+                  </div>
+                  <div class="col-sm-4 col-xs-4 pull-right sideBar-time">
+                    <span class="time-meta pull-right">${data.getHours()+':'+data.getMinutes()}
+                  </span>
+                  <span id="${dados.sala}" class="qtdmsg"></span>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+`
+
+    });
+
+  }
+  
+  const gravaLocal = dados =>{
+         
+    dado.push(dados)
+    localStorage.setItem('received',JSON.stringify(dado));
+    const localname = dados.sala.toString();
+    msg = [];
+      
+       //monta o objeto chat
+      let chatitem = {
+          'text':dados.text=='1'?'Inicio do Atendimento':dados.text,
+          'time':dados.data,
+          'status':'',// receiver sender
+
+      }
+      msg.push(chatitem);
+      localStorage.setItem(localname,JSON.stringify(msg))
+    handleReceived()
+  }
+  
+  let msg;
+  const atualizaLocal = dados =>{
+    const localname = dados.sala.toString();
+    
+     const filtro = dado.filter(item=> item.sala == dados.sala);
+
+    if(filtro == ''){
+      gravaLocal(dados);  
+    } 
+    if(localStorage.getItem(localname) ==null){
+      msg = [];
+      
+       //monta o objeto chat
+      let chatitem = {
+          'text':dados.text=='1'?'Atendimento':dados.text,
+          'time':dados.data,
+          'status':'receiver',// receiver sender
+
+      }
+      msg.push(chatitem);
+      localStorage.setItem(localname,JSON.stringify(msg))
+      
+      
+    }else{
+      msg = JSON.parse(localStorage.getItem(localname));
+      let chatitem = {
+          'text':dados.text,
+          'time':dados.data,
+          'status':'receiver',// receiver sender
+
+      }
+      msg.push(chatitem);
+      localStorage.setItem(localname,JSON.stringify(msg));
+      chat.innerHTML="";
+      const att = document.getElementById('chat')
+           
+
+      if(att.getAttribute('data-js') != localname){
+        
+        return
+        
+      }else{
+        msg.forEach(listaMsg);
+      }
+      
+      
+      
+    } 
+   
+  }
+ 
+  socket.on('Atendimento', async(dados)=>{
+    //verifica se tem alguma tabela de atendimento criada ou se o chamado ja esta cadastrado na tabela
+
+    localStorage.getItem('received')== null? gravaLocal(dados): atualizaLocal(dados); 
+    
+  })
+  handleReceived()
+</script>
+</body>
+
+</html>
