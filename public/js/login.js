@@ -38,7 +38,7 @@ logar.addEventListener('submit',async(e)=>{
                 'senha':senha.value
             })
         };
-        const requisicao = await fetch('http://localhost:3000/login',headers);
+        const requisicao = await fetch('https://chat-han4.onrender.com/login',headers);
         const response = await requisicao.json();
         if(!response.erro){
             localStorage.setItem('Usuario',JSON.stringify({'usuario':response.usuario,'token':response.token}))
@@ -75,7 +75,7 @@ Cadastrar.addEventListener('submit',async (e)=>{
                 'senha':senha.value
             })
         };
-        const requisicao = await fetch('http://localhost:3000/cadastrar-usuario',options);
+        const requisicao = await fetch('https://chat-han4.onrender.com/cadastrar-usuario',options);
         const response = await requisicao.json();
          if(requisicao.status == 400){
             msg.innerHTML=`<div class="erro">
